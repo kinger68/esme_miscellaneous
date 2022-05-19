@@ -1,0 +1,22 @@
+Host RP-sandbox1
+  HostName 3.129.40.43
+Host RP-sandbox1-meet
+  HostName 3.23.20.205
+Host RP-sandbox2
+  HostName 3.136.32.15
+Host RP-sandbox2-meet
+  HostName 3.128.247.139
+Host RP-sandbox3
+  HostName 3.141.124.31
+Host RP-sandbox3-meet
+  HostName 3.143.231.90
+
+Host RP-* RE-* Dev-* SRV-* RC-*
+  User ubuntu
+  IdentityFile ~/.ssh/riffdev_2_useast2_key.pem
+  IdentitiesOnly yes
+  ForwardAgent yes
+
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/esme_mac_id_ed25519
